@@ -1,12 +1,14 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 repositories {
    maven { url 'https://dl.bintray.com/kennyc1012/maven' }
+	mavenCentral()
 }
 
 android {
 	compileSdkVersion 25
-	buildToolsVersion "25.0.2"
+	buildToolsVersion "25.0.3"
 
 	defaultConfig {
 		applicationId "me.anon.grow"
@@ -14,14 +16,23 @@ android {
 		targetSdkVersion 25
 		versionCode 9
 		versionName "2.2.1"
+
+		javaCompileOptions {
+			annotationProcessorOptions {
+				includeCompileClasspath false
+			}
+		}
 	}
 
 	lintOptions {
 		abortOnError false
 	}
 
+	flavorDimensions "default"
+
 	productFlavors {
 		production {
+			dimension "default"
 			buildConfigField "Boolean", "DISCRETE", "false"
 
 			manifestPlaceholders = [
@@ -30,6 +41,7 @@ android {
 		}
 
 		discrete {
+			dimension "default"
 			buildConfigField "Boolean", "DISCRETE", "true"
 
 			manifestPlaceholders = [
@@ -60,4 +72,5 @@ dependencies {
 	compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
 	compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.1.4'
 	compile 'net.lingala.zip4j:zip4j:1.3.2'
+	compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
