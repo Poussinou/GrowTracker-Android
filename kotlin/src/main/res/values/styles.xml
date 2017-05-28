@@ -1,0 +1,76 @@
+<resources>
+	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="android:colorPrimary">#4AA74E</item>
+		<item name="android:colorPrimaryDark">#387E3B</item>
+
+		<item name="colorPrimary">#4AA74E</item>
+		<item name="colorPrimaryDark">#387E3B</item>
+
+		<item name="actionModeBackground">@color/blue</item>
+		<item name="android:actionModeBackground">@color/blue</item>
+
+		<item name="actionModeStyle">@style/ActionMode</item>
+		<item name="android:actionModeStyle">@style/ActionMode</item>
+
+		<item name="windowActionModeOverlay">true</item>
+	</style>
+
+	<style name="Theme.Transparent" parent="Theme.AppCompat">
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+
+	<style name="Toolbar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+		<item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+	</style>
+
+	<style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+		<item name="spinBars">true</item>
+		<item name="color">@android:color/white</item>
+	</style>
+
+	<style name="ActionMode" parent="@style/Widget.AppCompat.ActionMode">
+    	<item name="android:background">@color/blue</item>
+	</style>
+
+	<style name="fullscreen" parent="Theme.AppCompat">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:fitsSystemWindows">true</item>
+	</style>
+
+	<style name="SectionTitle">
+		<item name="android:textColor">#ABA39B</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:fontFamily">sans-serif-medium</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:layout_gravity">center_vertical</item>
+		<item name="android:paddingLeft">16dp</item>
+		<item name="android:paddingRight">16dp</item>
+	</style>
+
+	<style name="PaperCard">
+		<item name="android:paddingTop">16dp</item>
+		<item name="android:paddingBottom">8dp</item>
+	</style>
+
+	<style name="SubsectionTitle">
+		<item name="android:textColor">#ff000000</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:fontFamily">sans-serif-medium</item>
+		<item name="android:clickable">false</item>
+	</style>
+
+	<style name="SubsectionSubTitle">
+		<item name="android:textColor">#ff666666</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:fontFamily">sans-serif-light</item>
+		<item name="android:clickable">false</item>
+		<item name="android:layout_marginTop">4dp</item>
+	</style>
+</resources>

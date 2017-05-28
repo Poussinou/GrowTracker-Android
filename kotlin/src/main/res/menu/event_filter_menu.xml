@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu
+	xmlns:android="http://schemas.android.com/apk/res/android"
+>
+	<group android:checkableBehavior="all">
+		<item
+			android:id="@+id/filter_waterings"
+			android:checked="true"
+			android:title="Waterings"
+		/>
+	</group>
+
+	<group android:checkableBehavior="all">
+		<item
+			android:id="@+id/filter_notes"
+			android:checked="true"
+			android:title="Notes"
+		/>
+	</group>
+
+	<group android:checkableBehavior="all">
+		<item
+			android:id="@+id/filter_stages"
+			android:checked="true"
+			android:title="Stage changes"
+		/>
+	</group>
+
+	<item
+		android:id="@+id/filter_actions"
+		android:title="Actions"
+	/>
+</menu>
