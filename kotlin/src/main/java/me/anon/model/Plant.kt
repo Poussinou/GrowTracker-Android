@@ -3,7 +3,7 @@ package me.anon.model
 import android.content.Context
 import me.anon.lib.DateRenderer
 import me.anon.lib.Unit
-import me.anon.lib.helper.TimeHelper
+import me.anon.lib.toDays
 import java.util.*
 
 /**
@@ -55,7 +55,7 @@ data class Plant(
 
 			if (stageTimes.containsKey(stage) && stage != null)
 			{
-				summary += " / <b>" + TimeHelper.toDays(stageTimes[stage] ?: 0).toInt() + stage.printString.substring(0, 1).toLowerCase() + "</b>"
+				summary += " / <b>" + (stageTimes[stage] ?: 0).toDays() + stage.printString.substring(0, 1).toLowerCase() + "</b>"
 			}
 
 			if (lastWater != null)
@@ -113,7 +113,7 @@ data class Plant(
 
 			if (stageTimes.containsKey(stage) && stage != null)
 			{
-				summary += " / <b>" + TimeHelper.toDays(stageTimes[stage] ?: 0).toInt() + stage.printString.substring(0, 1).toLowerCase() + "</b>"
+				summary += " / <b>" + (stageTimes[stage] ?: 0L).toDays() + stage.printString.substring(0, 1).toLowerCase() + "</b>"
 			}
 
 			if (lastWater != null)
