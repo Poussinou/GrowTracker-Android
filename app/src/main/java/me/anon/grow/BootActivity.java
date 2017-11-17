@@ -66,6 +66,7 @@ public class BootActivity extends Activity
 						startup();
 					}
 				})
+				.setCancelable(false)
 				.show();
 		}
 		else
@@ -132,6 +133,13 @@ public class BootActivity extends Activity
 						check.dismiss();
 						check.show(getFragmentManager(), null);
 					}
+				}
+			});
+			check.setOnDialogCancelled(new PinDialogFragment.OnDialogCancelled()
+			{
+				@Override public void onDialogCancelled()
+				{
+					finish();
 				}
 			});
 
